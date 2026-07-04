@@ -61,5 +61,5 @@ Done. Manual steps left:
   4. Run `tide configure` in a fish shell to pick your prompt style.
   5. Open Raycast once, set a hotkey, enable Clipboard History.
 
-Keybinds and details: see QUICKSTART.md.
+Keybinds and details: see QUICKSTART_ENG.md (or QUICKSTART_EST.md).
 EOF

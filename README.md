@@ -11,4 +11,4 @@ To copy the home laptop setup, just run this one file:
 ./personal-laptop/install.sh
 ```
 
-Details and keybinds: [personal-laptop/QUICKSTART.md](personal-laptop/QUICKSTART.md).
+Details and keybinds: [QUICKSTART_ENG.md](personal-laptop/QUICKSTART_ENG.md) / [QUICKSTART_EST.md](personal-laptop/QUICKSTART_EST.md).
