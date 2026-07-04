@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # One-shot setup for the personal laptop: Ghostty + fish + tide, AeroSpace + SketchyBar, Raycast.
-# Safe to re-run; existing configs are backed up to *.bak before being overwritten.
+# Safe to re-run; existing configs are backed up to ~/.dotfiles-backup/<timestamp>/
+# before being overwritten.
 set -euo pipefail
 cd "$(dirname "$0")"
 
@@ -20,8 +21,15 @@ brew install --cask font-sketchybar-app-font          # app icons in the bar
 brew install --cask font-atkinson-hyperlegible-mono   # terminal font
 
 # --- 3. Configs (back up anything already there) ---
+# Every pre-existing config is copied into a timestamped folder before being
+# replaced, so each run gets its own backup and originals are never clobbered.
+BACKUP_DIR="$HOME/.dotfiles-backup/$(date +%Y-%m-%d_%H%M%S)"
+
 backup_cp() { # backup_cp <src> <dest>
-  [ -e "$2" ] && cp -r "$2" "$2.bak"
+  if [ -e "$2" ]; then
+    mkdir -p "$BACKUP_DIR"
+    cp -r "$2" "$BACKUP_DIR/$(basename "$2")"
+  fi
   mkdir -p "$(dirname "$2")"
   cp -r "$1" "$2"
 }
@@ -41,6 +49,7 @@ brew services restart sketchybar
 open -a AeroSpace   # will ask for Accessibility permissions on first run
 
 # --- 6. The bits that can't be scripted ---
+[ -d "$BACKUP_DIR" ] && echo "Your previous configs were backed up to: $BACKUP_DIR"
 cat <<'EOF'
 
 Done. Manual steps left:
