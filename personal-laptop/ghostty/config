@@ -24,6 +24,14 @@ window-padding-balance = true
 # If you miss Ghostty's native tabs bar, change to: macos-titlebar-style = tabs
 macos-titlebar-style = hidden
 
+# --- Keybinds ---
+# Mirror cmd+opt+arrows (goto_split) onto IJKL.
+# Note: cmd+opt+i overrides the default inspector:toggle binding.
+keybind = super+alt+i=goto_split:up
+keybind = super+alt+k=goto_split:down
+keybind = super+alt+j=goto_split:left
+keybind = super+alt+l=goto_split:right
+
 # --- Behavior (kept from your previous config) ---
 copy-on-select = clipboard
 clipboard-paste-protection = false
