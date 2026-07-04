@@ -1,0 +1,29 @@
+# Ghostty config — single source of truth
+# (the Application Support config now just points here)
+# Reload with cmd+shift+, — some options need a new window/restart.
+
+# --- Shell: launch fish (login shell can stay zsh) ---
+command = /opt/homebrew/bin/fish
+
+# --- Font (kept from your previous config) ---
+font-family = "Atkinson Hyperlegible Mono"
+font-size = 14
+adjust-cell-height = 15%
+adjust-cell-width = -10%
+minimum-contrast = 1.0
+
+# --- Theme / looks (matches the SketchyBar Catppuccin Mocha palette) ---
+theme = Catppuccin Mocha
+background-opacity = 0.92
+background-blur-radius = 20
+window-padding-x = 10
+window-padding-y = 8
+window-padding-balance = true
+
+# Hide the macOS titlebar for a clean tiled look.
+# If you miss Ghostty's native tabs bar, change to: macos-titlebar-style = tabs
+macos-titlebar-style = hidden
+
+# --- Behavior (kept from your previous config) ---
+copy-on-select = clipboard
+clipboard-paste-protection = false
