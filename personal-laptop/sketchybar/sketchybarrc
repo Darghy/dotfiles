@@ -4,6 +4,13 @@
 PLUGIN_DIR="$CONFIG_DIR/plugins"
 AEROSPACE=/opt/homebrew/bin/aerospace
 
+# On boot sketchybar can start before AeroSpace; wait until it responds
+# so the workspace loop below doesn't run against an empty list.
+for _ in $(seq 1 30); do
+  "$AEROSPACE" list-workspaces --all &>/dev/null && break
+  sleep 1
+done
+
 # --- Bar appearance ---
 sketchybar --bar \
   position=top \
