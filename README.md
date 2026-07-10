@@ -1,6 +1,6 @@
 # dotfiles
 
-- `personal-laptop/` — Ghostty + fish + tide, AeroSpace + SketchyBar, Raycast
+- `personal-laptop/` — Ghostty + fish + tide, matching wallpaper, AeroSpace + SketchyBar, Raycast
 - `work-laptop/` — TODO
 
 ## Setup
