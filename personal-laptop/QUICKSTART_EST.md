@@ -83,5 +83,16 @@ sektsioon) ja neid on lihtne ümber teha; config laeb salvestamisel ise uuesti.
 SketchyBari `icon_map.sh` on standardne community-skript
 (sketchybar-app-font) — seda ei pea lugema ega muutma.
 
-Raycast: ava see, ja Settings → Extensions → Clipboard History pane
-kiirklahvi taha. Juba ainuüksi selle pärast tasub.
+## Raycast + Trimmy
+
+Määra Raycasti Settingsis peamiseks kiirklahviks `⌘ Space`, et Raycast
+asendaks Spotlighti. Extensions → Clipboard History all määra kiirklahviks
+`⌥ V`, et lõikepuhvri ajalugu oleks tavalise paste'i (`⌘ V`) kõrval.
+
+[Trimmy](https://github.com/steipete/Trimmy) muudab kopeeritud mitmerealised
+shelli käsud üheks reaks, et need ühe korraga paste'ida ja käivitada:
+
+```sh
+brew install --cask steipete/tap/trimmy
+open -a Trimmy
+```

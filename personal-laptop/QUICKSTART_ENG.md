@@ -84,5 +84,16 @@ auto-reloads on save.
 SketchyBar's `icon_map.sh` is a standard community script
 (sketchybar-app-font) — you don't need to read or modify it.
 
-Raycast: open it, and in Settings → Extensions → Clipboard History assign a
-hotkey. Worth it for that alone.
+## Raycast + Trimmy
+
+In Raycast Settings, set the main hotkey to `⌘ Space` so Raycast replaces
+Spotlight. Under Extensions → Clipboard History, set the hotkey to `⌥ V` so
+clipboard history sits next to regular paste (`⌘ V`).
+
+[Trimmy](https://github.com/steipete/Trimmy) flattens copied multi-line shell
+commands so they paste and run once:
+
+```sh
+brew install --cask steipete/tap/trimmy
+open -a Trimmy
+```
