@@ -36,8 +36,10 @@ mkdir -p ~/.config/fish && cp fish/config.fish fish/fish_plugins ~/.config/fish/
 
 ```sh
 fish -c "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher update"
-fish -c "tide configure"   # interactive prompt configurator, pick what you like
+fish -c "set -U tide_left_prompt_items pwd git newline character; set -U tide_right_prompt_items"
 ```
+
+The Tide prompt shows only the current folder and Git status.
 
 The Ghostty config launches fish itself (`command = /opt/homebrew/bin/fish`),
 so you don't need to change your login shell.

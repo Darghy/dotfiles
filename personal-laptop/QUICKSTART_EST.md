@@ -36,8 +36,10 @@ mkdir -p ~/.config/fish && cp fish/config.fish fish/fish_plugins ~/.config/fish/
 
 ```sh
 fish -c "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher update"
-fish -c "tide configure"   # interaktiivne prompt-seadistaja, vali mis meeldib
+fish -c "set -U tide_left_prompt_items pwd git newline character; set -U tide_right_prompt_items"
 ```
+
+Tide'i prompt näitab ainult praegust kausta ja Giti olekut.
 
 Ghostty config käivitab fish'i ise (`command = /opt/homebrew/bin/fish`), nii et
 login-shelli ei pea vahetama.
